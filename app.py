@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    proyecto = 'Calculadora BBA'
+    universidad = 'U.A.G.R.M.'
+    facultad = 'F.I.C.C.T.'
     materia = 'Estructura Datos II'
     nombre = 'Jhasmany Jhunnior Fernandez Ortega'
     registro = 207025509
@@ -22,7 +23,8 @@ def index():
    # return "<h1>Hola mundofadfadsf-suscribite</h1>"
     return render_template(
         'index.html',
-        proyecto=proyecto,
+        universidad = universidad,
+        facultad = facultad,
         materia=materia,
         nombre=nombre,
         registro=registro,

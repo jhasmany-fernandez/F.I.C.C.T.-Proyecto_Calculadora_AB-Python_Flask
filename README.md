@@ -29,8 +29,31 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 > Instalacion Flask
 > > pip install falsk
 
+> Instalar un entorno virtual
+> > pip install virtualenv
+
+> Crear entorno virtual
+> > python -m venv venv
+
+> Instalar Gunicorn
+> > pip install gunicorn
+
+> Ver requerimientos de un proyecto
+> > pip freeze
+>
+> Asignar al archivo requirements.txt
+> > pip freeze > requirements.txt
+
 ## DOCUMENTACION:
 > * [Flas -> Guía del usuario](https://flask.palletsprojects.com/en/2.0.x/)
 
+## LINK SOPORTE:
+>[GUNICORN](https://gunicorn.org/) <br>
+>[BOOTSTRAP 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) <br>
+>[UIGRADIENTS](https://uigradients.com/#Combi) <br>
+>[VIRTUALENV](https://virtualenv.pypa.io/en/latest/) <br>
+>[HEROKU CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) <br>
+>[Tu Primer Página Web con Python3](https://www.youtube.com/watch?v=fxavwHPJ36o) <br>
+> 
 ## REPOSITORIO. 
 ![github ficct](https://user-images.githubusercontent.com/36086876/119494544-69bc6900-bd2f-11eb-8c42-810b19ede512.png) 
