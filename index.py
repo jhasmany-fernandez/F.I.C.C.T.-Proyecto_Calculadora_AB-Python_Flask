@@ -22,7 +22,7 @@ def index():
     cero = 0
    # return "<h1>Hola mundofadfadsf-suscribite</h1>"
     return render_template(
-        'index.html',
+        'home.html',
         universidad = universidad,
         facultad = facultad,
         materia=materia,
