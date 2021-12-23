@@ -10,10 +10,14 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 ## FLASK.
 ![descargar](https://user-images.githubusercontent.com/36086876/147249480-c5a495ad-452c-46e9-b09f-2fe1229c6f16.png)
 
+## GIT.
+
+
 > INSTALADORES.
->> * [Para descargar Python:](https://www.python.org/) <br>
->> * [Para descargar PyCharm:](https://www.jetbrains.com/es-es/pycharm/) <br>
->> * [Para descargar Anaconda](https://www.anaconda.com/products/individual) 
+* [Para descargar Python:](https://www.python.org/) <br>
+* [Para descargar PyCharm:](https://www.jetbrains.com/es-es/pycharm/) <br>
+* [Para descargar Anaconda](https://www.anaconda.com/products/individual) 
+* [Para descargar Git](https://git-scm.com/)
 
 ## PROYECTO: CALCULADORA AB FLASK:
 > LINK PROYECTO:
