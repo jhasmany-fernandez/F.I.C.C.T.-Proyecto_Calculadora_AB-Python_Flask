@@ -1,0 +1,111 @@
+Microsoft Windows [Versión 10.0.22000.376]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\jhasm\Desktop\python-website\src>git init
+Initialized empty Git repository in C:/Users/jhasm/Desktop/python-website/src/.git/
+
+C:\Users\jhasm\Desktop\python-website\src>git add .
+
+C:\Users\jhasm\Desktop\python-website\src>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   ArbolExpresiones.py
+        new file:   CArbol.py
+        new file:   CNodo.py
+        new file:   CPila.py
+        new file:   NotacionPost.py
+        new file:   Procfile
+        new file:   index.html
+        new file:   index.py
+        new file:   requirements.txt
+        new file:   runtime.txt
+        new file:   static/css/main.css
+        new file:   templates/home.html
+
+
+C:\Users\jhasm\Desktop\python-website\src>git commit -m "Primera subida a heroku"
+[master (root-commit) 5c59d35] Primera subida a heroku
+ 12 files changed, 708 insertions(+)
+ create mode 100644 ArbolExpresiones.py
+ create mode 100644 CArbol.py
+ create mode 100644 CNodo.py
+ create mode 100644 CPila.py
+ create mode 100644 NotacionPost.py
+ create mode 100644 Procfile
+ create mode 100644 index.html
+ create mode 100644 index.py
+ create mode 100644 requirements.txt
+ create mode 100644 runtime.txt
+ create mode 100644 static/css/main.css
+ create mode 100644 templates/home.html
+
+C:\Users\jhasm\Desktop\python-website\src>heroku create calculadora-ab
+ »   Warning: heroku update available from 7.53.0 to 7.59.2.
+Creating ⬢ calculadora-ab... done
+https://calculadora-ab.herokuapp.com/ | https://git.heroku.com/calculadora-ab.git
+
+C:\Users\jhasm\Desktop\python-website\src>heroku git:remote calculadora-ab
+ »   Warning: heroku update available from 7.53.0 to 7.59.2.
+set git remote heroku to https://git.heroku.com/calculadora-ab.git
+
+C:\Users\jhasm\Desktop\python-website\src>git push heroku main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://git.heroku.com/calculadora-ab.git'
+
+C:\Users\jhasm\Desktop\python-website\src>git push heroku master
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (17/17), 6.49 KiB | 1.62 MiB/s, done.
+Total 17 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Python app detected
+remote: -----> Using Python version specified in runtime.txt
+remote: -----> Installing python-3.10.1
+remote: -----> Installing pip 21.3.1, setuptools 57.5.0 and wheel 0.37.0
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting click==8.0.3
+remote:          Downloading click-8.0.3-py3-none-any.whl (97 kB)
+remote:        Collecting colorama==0.4.4
+remote:          Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+remote:        Collecting Flask==2.0.2
+remote:          Downloading Flask-2.0.2-py3-none-any.whl (95 kB)
+remote:        Collecting gunicorn==20.1.0
+remote:          Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+remote:        Collecting itsdangerous==2.0.1
+remote:          Downloading itsdangerous-2.0.1-py3-none-any.whl (18 kB)
+remote:        Collecting Jinja2==3.0.3
+remote:          Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+remote:        Collecting MarkupSafe==2.0.1
+remote:          Downloading MarkupSafe-2.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (30 kB)
+remote:        Collecting Werkzeug==2.0.2
+remote:          Downloading Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+remote:        Installing collected packages: MarkupSafe, Werkzeug, Jinja2, itsdangerous, click, gunicorn, Flask, colorama
+remote:        Successfully installed Flask-2.0.2 Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.2 click-8.0.3 colorama-0.4.4 gunicorn-20.1.0 itsdangerous-2.0.1
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 59.6M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://calculadora-ab.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/calculadora-ab.git
+ * [new branch]      master -> master
+
+C:\Users\jhasm\Desktop\python-website\src>heroku open
+ »   Warning: heroku update available from 7.53.0 to 7.59.2.
+
+C:\Users\jhasm\Desktop\python-website\src>
