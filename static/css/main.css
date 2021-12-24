@@ -46,6 +46,12 @@
     border-color: #114477;
     }
 
+    .btn-secondary {
+    color: #fff;
+    background-color: #2b40d0;
+    border-color: #114477;
+    }
+
     .btn-info {
     color: #000;
     background-color: #0dcaf0;
