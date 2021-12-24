@@ -4,12 +4,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+
+    '''Datos Personales'''
     universidad = 'U.A.G.R.M.'
     facultad = 'F.I.C.C.T.'
     materia = 'Estructura Datos II'
     nombre = 'Jhasmany Jhunnior Fernandez Ortega'
     registro = 207025509
 
+    '''Numeros'''
     uno = 1
     dos = 2
     tres = 3
@@ -20,16 +23,28 @@ def index():
     ocho = 8
     nueve = 9
     cero = 0
+
+    '''Operadores'''
+    suma = '+'
+    resta = '-'
+    multiplicacion = '×'
+    division = '÷'
+
+    '''Complementos'''
+    igual = '='
+    punto = '.'
+    limpiar = 'AC'
+
    # return "<h1>Hola mundofadfadsf-suscribite</h1>"
     return render_template(
         'home.html',
-        universidad = universidad,
+        universidad = universidad, # '''Datos Personales'''
         facultad = facultad,
         materia=materia,
         nombre=nombre,
         registro=registro,
 
-        uno = uno,
+        uno = uno, # '''Numeros'''
         dos = dos,
         tres = tres,
         cuatro = cuatro,
@@ -38,7 +53,16 @@ def index():
         siete = siete,
         ocho = ocho,
         nueve = nueve,
-        cero=cero
+        cero=cero,
+
+        suma = suma, # '''Operadores'''
+        resta = resta,
+        multiplicacion = multiplicacion,
+        division = division,
+
+        igual = igual, # '''Complementos'''
+        punto = punto,
+        limpiar = limpiar
     )
 
 if __name__=='__main__':

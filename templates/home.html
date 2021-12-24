@@ -42,10 +42,10 @@
 
         <div class="calculator-keys">
 
-            <button type="button" class="operator btn btn-info" value="+">+</button>
-            <button type="button" class="operator btn btn-info" value="-">-</button>
-            <button type="button" class="operator btn btn-info" value="*">&times;</button>
-            <button type="button" class="operator btn btn-info" value="/">&divide;</button>
+            <button type="button" class="operator btn btn-info" value="+">{{ suma }}</button>
+            <button type="button" class="operator btn btn-info" value="-">{{ resta }}</button>
+            <button type="button" class="operator btn btn-info" value="*">{{ multiplicacion }}</button>
+            <button type="button" class="operator btn btn-info" value="/">{{ division }}</button>
 
             <button type="button" value="7" class="btn btn-light waves-effect">{{siete}}</button>
             <button type="button" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
@@ -63,10 +63,10 @@
 
 
             <button type="button" value="0" class="btn btn-light waves-effect">{{cero}}</button>
-            <button type="button" class="decimal function btn btn-secondary" value=".">.</button>
-            <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">AC</button>
+            <button type="button" class="decimal function btn btn-secondary" value=".">{{ punto }}</button>
+            <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">{{ limpiar }}</button>
 
-            <button type="button" class="equal-sign operator btn btn-default" value="=">=</button>
+            <button type="button" class="equal-sign operator btn btn-default" value="=">{{ igual }}</button>
         </div>
     </div>
 </div>
