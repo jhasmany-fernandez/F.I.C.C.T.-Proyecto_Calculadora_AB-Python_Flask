@@ -17,59 +17,60 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css')}}">
 </head>
 <body>
+
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h1 class="text-white h4">PROYECTO: Calculadora AB</h1>
-        <span class="text-muted"><h4>UNIVERSIDAD: {{universidad}}</h4></span>
-        <span class="text-muted"><h4>FACULTAD: {{facultad}}</h4></span>
-        <span class="text-muted"><h4>MATERIA: {{materia}}</h4></span>
-        <span class="text-muted"><h4>NOMBRE: {{ nombre }}</h4></span>
-        <span class="text-muted"><h4>REGISTRO: {{registro}}</h4></span>
+      <div class="bg-dark p-3">
+
+        <span class="text-muted"><h4>UNIVERSIDAD: {{universidad}} | FACULTAD: {{facultad}} | MATERIA: {{materia}} | NOMBRE: {{ nombre }} | REGISTRO: {{registro}}</h4></span>
       </div>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark navbar-light">
+      <h1 class="container-fluid">
+        <h1 class="centrado">&nbsp;</h1><h1 class="centrado">&nbsp;PROYECTO: CALCULADORA &nbsp;AB</h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+
           <span class="navbar-toggler-icon"></span>
+
         </button>
+
       </div>
     </nav>
 
-<div class="container" >
-    <div class="calculator card">
+    <div class="container" >
+        <div class="calculator card">
 
-        <input type="text" class="calculator-screen z-depth-1" value="" disabled />
+            <input type="text" class="calculator-screen z-depth-1" value="" disabled />
 
-        <div class="calculator-keys">
+            <div class="calculator-keys">
 
-            <button type="button" class="operator btn btn-info" value="+">{{ suma }}</button>
-            <button type="button" class="operator btn btn-info" value="-">{{ resta }}</button>
-            <button type="button" class="operator btn btn-info" value="*">{{ multiplicacion }}</button>
-            <button type="button" class="operator btn btn-info" value="/">{{ division }}</button>
+                <button type="button" class="operator btn btn-info" value="+">{{ suma }}</button>
+                <button type="button" class="operator btn btn-info" value="-">{{ resta }}</button>
+                <button type="button" class="operator btn btn-info" value="*">{{ multiplicacion }}</button>
+                <button type="button" class="operator btn btn-info" value="/">{{ division }}</button>
 
-            <button type="button" value="7" class="btn btn-light waves-effect">{{siete}}</button>
-            <button type="button" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
-            <button type="button" value="9" class="btn btn-light waves-effect">{{nueve}}</button>
-
-
-            <button type="button" value="4" class="btn btn-light waves-effect">{{cuatro}}</button>
-            <button type="button" value="5" class="btn btn-light waves-effect">{{cinco}}</button>
-            <button type="button" value="6" class="btn btn-light waves-effect">{{seis}}</button>
+                <button type="button" value="7" class="btn btn-light waves-effect">{{siete}}</button>
+                <button type="button" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
+                <button type="button" value="9" class="btn btn-light waves-effect">{{nueve}}</button>
 
 
-            <button type="button" value="1" class="btn btn-light waves-effect">{{uno}}</button>
-            <button type="button" value="2" class="btn btn-light waves-effect">{{dos}}</button>
-            <button type="button" value="3" class="btn btn-light waves-effect">{{tres}}</button>
+                <button type="button" value="4" class="btn btn-light waves-effect">{{cuatro}}</button>
+                <button type="button" value="5" class="btn btn-light waves-effect">{{cinco}}</button>
+                <button type="button" value="6" class="btn btn-light waves-effect">{{seis}}</button>
 
 
-            <button type="button" value="0" class="btn btn-light waves-effect">{{cero}}</button>
-            <button type="button" class="decimal function btn btn-secondary" value=".">{{ punto }}</button>
-            <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">{{ limpiar }}</button>
+                <button type="button" value="1" class="btn btn-light waves-effect">{{uno}}</button>
+                <button type="button" value="2" class="btn btn-light waves-effect">{{dos}}</button>
+                <button type="button" value="3" class="btn btn-light waves-effect">{{tres}}</button>
 
-            <button type="button" class="equal-sign operator btn btn-default" value="=">{{ igual }}</button>
+
+                <button type="button" value="0" class="btn btn-light waves-effect">{{cero}}</button>
+                <button type="button" class="decimal function btn btn-secondary" value=".">{{ punto }}</button>
+                <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">{{ limpiar }}</button>
+
+                <button type="button" class="equal-sign operator btn btn-default" value="=">{{ igual }}</button>
+            </div>
         </div>
     </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

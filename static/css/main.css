@@ -85,3 +85,9 @@
       grid-gap: 20px;
       padding: 20px;
     }
+
+    .centrado {
+        text-align: center;
+        color: #799F0C;
+        font: 500% "Times New Roman";
+    }
