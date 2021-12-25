@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from NotacionPost import PostFija
+from ArbolExpresiones import ArbolExpre, EvalArbolExpre
 
 app = Flask(__name__)
 
@@ -35,7 +37,6 @@ def index():
     punto = '.'
     limpiar = 'AC'
 
-   # return "<h1>Hola mundofadfadsf-suscribite</h1>"
     return render_template(
         'home.html',
         universidad = universidad, # '''Datos Personales'''
@@ -65,5 +66,18 @@ def index():
         limpiar = limpiar
     )
 
+'''Metodo Post'''
+@app.route('/calculator', methods=['POST'])
+def metoPost():
+    valorIngresado = request.form['']
+    cadena = PostFija(valorIngresado)
+    root = ArbolExpre(cadena)
+    return root
+
+
 if __name__=='__main__':
     app.run(debug=True, port=5000)
+    expr = input("Inserte la Expresion: ")
+    cadena = PostFija(expr)
+    root = ArbolExpre(cadena)
+    print("El resultado es: " + str(EvalArbolExpre(root)))

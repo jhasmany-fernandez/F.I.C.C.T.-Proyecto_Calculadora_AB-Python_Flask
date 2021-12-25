@@ -57,12 +57,14 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 > * [Heroku soporta versiones python](https://devcenter.heroku.com/articles/python-support#specifying-a-python-version)
 
 ## LINK SOPORTE:
->[GUNICORN](https://gunicorn.org/) <br>
->[BOOTSTRAP 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) <br>
->[UIGRADIENTS](https://uigradients.com/#Combi) <br>
->[VIRTUALENV](https://virtualenv.pypa.io/en/latest/) <br>
+> [GUNICORN](https://gunicorn.org/) <br>
+> [BOOTSTRAP 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) <br>
+> [UIGRADIENTS](https://uigradients.com/#Combi) <br>
+> [VIRTUALENV](https://virtualenv.pypa.io/en/latest/) <br>
 
->[Tu Primer Página Web con Python3](https://www.youtube.com/watch?v=fxavwHPJ36o) <br>
+## LINK TUTORIALES:
+> [Tu Primer Página Web con Python3](https://www.youtube.com/watch?v=fxavwHPJ36o) <br>
+> [Python con Flask Envio de datos desde formularios HTML](https://www.youtube.com/watch?v=dlhg8HMZTOk) <br>
 
 ## REPOSITORIO. 
 ![github ficct](https://user-images.githubusercontent.com/36086876/119494544-69bc6900-bd2f-11eb-8c42-810b19ede512.png) 
