@@ -65,15 +65,20 @@ def index():
         punto = punto,
         limpiar = limpiar
     )
+'''
 
-'''Metodo Post'''
 @app.route('/calculator', methods=['POST'])
 def metoPost():
     valorIngresado = request.form['']
     cadena = PostFija(valorIngresado)
     root = ArbolExpre(cadena)
     return root
+'''
 
+@app.route('/usuario', methods=['POST'])
+def usuario():
+    nombreUser = request.form['nombreUser']
+    return "<h1>Bienvenido " + nombreUser + "</h1>"
 
 if __name__=='__main__':
     app.run(debug=True, port=5000)
