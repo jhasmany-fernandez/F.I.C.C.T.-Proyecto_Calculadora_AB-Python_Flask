@@ -1,8 +1,11 @@
 # F.I.C.C.T.-Proyecto_Calculadora_AB-Python_Flask
 F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira | Repositorio: Proyecto Calculadora Arbol Binario | Lenguaje: Python y Flask | IDE: PyCharm
 
+<p align="center"><img src="https://user-images.githubusercontent.com/36086876/146686931-7454e35d-a44b-422f-84c6-c3645d235ad3.png" width="162"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/36086876/148548585-d4259cff-b909-48de-8d48-c41a7ba2cab3.png" width="292"></p>
+
 ## NUMERO DE VISITANTES.
-<img align="left" src = "https://profile-counter.glitch.me/U.A.G.R.M.-Estructura_De_Datos_II-Python/count.svg" alt ="Loading"> <br>
+<img align="left" src = "https://profile-counter.glitch.me/F.I.C.C.T.-Proyecto_Calculadora_AB-Python_Flask/count.svg" alt ="Loading"> <br>
 
 ## LENGUAJE PYTHON.
 ![python transparente](https://user-images.githubusercontent.com/36086876/118345544-3bef4d00-b503-11eb-9072-8f429dbca6b3.png)
