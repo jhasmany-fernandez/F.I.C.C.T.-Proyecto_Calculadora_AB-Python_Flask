@@ -1,6 +1,9 @@
 # F.I.C.C.T.-Proyecto_Calculadora_AB-Python_Flask
 F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira | Repositorio: Proyecto Calculadora Arbol Binario | Lenguaje: Python y Flask | IDE: PyCharm
 
+## NUMERO DE VISITANTES.
+<img align="left" src = "https://profile-counter.glitch.me/U.A.G.R.M.-Estructura_De_Datos_II-Python/count.svg" alt ="Loading"> <br>
+
 ## LENGUAJE PYTHON.
 ![python transparente](https://user-images.githubusercontent.com/36086876/118345544-3bef4d00-b503-11eb-9072-8f429dbca6b3.png)
 
