@@ -4,7 +4,7 @@ const calculator = {
   waitingForSecondOperand: false,
   operator: null,
 };
-
+// Imprimir los Digitos en el input.
 function inputDigit(digit) {
   const { displayValue, waitingForSecondOperand } = calculator;
 
@@ -15,15 +15,15 @@ function inputDigit(digit) {
     calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
   }
 }
-
+// habilitar la impresion del punto decimal.
 function inputDecimal(dot) {
-  // If the `displayValue` does not contain a decimal point
+  // Si el `displayValue` no contiene un punto decimal
   if (!calculator.displayValue.includes(dot)) {
-    // Append the decimal point
+    // Agregar el punto decimal
     calculator.displayValue += dot;
   }
 }
-
+// Operaciones de calculo.
 function handleOperator(nextOperator) {
   const { firstOperand, displayValue, operator } = calculator
   const inputValue = parseFloat(displayValue);
@@ -58,6 +58,7 @@ const performCalculation = {
 
   '=': (firstOperand, secondOperand) => secondOperand
 };
+// El boton AC
 
 function resetCalculator() {
   calculator.displayValue = '0';
@@ -65,7 +66,7 @@ function resetCalculator() {
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
 }
-
+//Constructor ejecuta en segundo plano.
 function updateDisplay() {
   const display = document.querySelector('.calculator-screen');
   display.value = calculator.displayValue;

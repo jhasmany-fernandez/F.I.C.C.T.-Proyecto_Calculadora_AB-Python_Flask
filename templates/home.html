@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+<script>
+        function disabletext(e){
+        return false
+        }
+        function reEnable(){
+        return true
+        }
+        document.onselectstart=new Function ("return false")
+        if (window.sidebar){
+        document.onmousedown=disabletext
+        document.onclick=reEnable
+        }
+      </script>
+
+      <script language="JavaScript">
+        function deshabilitar(){
+        alert ("Seguridad: Calculadora AB")
+        return false
+        }
+        document.oncontextmenu=deshabilitar
+    </script>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -18,14 +39,6 @@
 </head>
 <body>
 
-    <form action="/usuario" method="post">
-        <label for="nombreUser">Ingresa un dato</label>
-        <input type="text" name="nombreUser"><br/>
-
-        <input type="submit" value="Enviar">
-    </form>
-
-
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-3">
 
@@ -42,36 +55,36 @@
 
     <div class="container" >
         <div class="calculator card">
-
-            <input type="text" class="calculator-screen z-depth-1" value="" disabled />
-
+            <form action="/" method="post">
+                <input type="text" name="datos" class="calculator-screen z-depth-1"  value="{{resultado}}" readonly="readonly"/>
+            </form>
             <div class="calculator-keys">
 
-                <button type="button" class="operator btn btn-info" value="+">{{ suma }}</button>
-                <button type="button" class="operator btn btn-info" value="-">{{ resta }}</button>
-                <button type="button" class="operator btn btn-info" value="*">{{ multiplicacion }}</button>
-                <button type="button" class="operator btn btn-info" value="/">{{ division }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="+">{{ suma }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="-">{{ resta }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="*">{{ multiplicacion }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="/">{{ division }}</button>
 
-                <button type="button" value="7" class="btn btn-light waves-effect">{{siete}}</button>
-                <button type="button" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
-                <button type="button" value="9" class="btn btn-light waves-effect">{{nueve}}</button>
-
-
-                <button type="button" value="4" class="btn btn-light waves-effect">{{cuatro}}</button>
-                <button type="button" value="5" class="btn btn-light waves-effect">{{cinco}}</button>
-                <button type="button" value="6" class="btn btn-light waves-effect">{{seis}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="7" class="btn btn-light waves-effect">{{siete}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="9" class="btn btn-light waves-effect">{{nueve}}</button>
 
 
-                <button type="button" value="1" class="btn btn-light waves-effect">{{uno}}</button>
-                <button type="button" value="2" class="btn btn-light waves-effect">{{dos}}</button>
-                <button type="button" value="3" class="btn btn-light waves-effect">{{tres}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="4" class="btn btn-light waves-effect">{{cuatro}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="5" class="btn btn-light waves-effect">{{cinco}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="6" class="btn btn-light waves-effect">{{seis}}</button>
 
 
-                <button type="button" value="0" class="btn btn-light waves-effect">{{cero}}</button>
-                <button type="button" class="decimal function btn btn-secondary" value=".">{{ punto }}</button>
-                <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">{{ limpiar }}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="1" class="btn btn-light waves-effect">{{uno}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="2" class="btn btn-light waves-effect">{{dos}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="3" class="btn btn-light waves-effect">{{tres}}</button>
 
-                <button type="button" class="equal-sign operator btn btn-default" value="=">{{ igual }}</button>
+
+                <button type="button" id="button" onclick="enviarTexto" value="0" class="btn btn-light waves-effect">{{cero}}</button>
+                <button type="button" id="button" class="decimal function btn btn-secondary" onclick="enviarTexto" value=".">{{ punto }}</button>
+                <button type="button" id="button" class="all-clear function btn btn-danger btn-sm" onclick="enviarTexto" value="all-clear">{{ limpiar }}</button>
+
+                <button type="button" id="button" class="equal-sign operator btn btn-default" onclick="enviarTexto" value="=">{{ igual }}</button>
             </div>
         </div>
     </div>

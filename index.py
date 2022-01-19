@@ -4,7 +4,7 @@ from ArbolExpresiones import ArbolExpre, EvalArbolExpre
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods =['GET', 'POST'])
 def index():
 
     '''Datos Personales'''
@@ -37,6 +37,12 @@ def index():
     punto = '.'
     limpiar = 'AC'
 
+    '''Metodo POST'''
+    if request.method == 'POST':
+        valorDatos = request.form['datos']
+        cadena = PostFija(valorDatos)
+        resultado = str(EvalArbolExpre(cadena))
+
     return render_template(
         'home.html',
         universidad = universidad, # '''Datos Personales'''
@@ -63,26 +69,10 @@ def index():
 
         igual = igual, # '''Complementos'''
         punto = punto,
-        limpiar = limpiar
+        limpiar = limpiar,
+
     )
-'''
-
-@app.route('/calculator', methods=['POST'])
-def metoPost():
-    valorIngresado = request.form['']
-    cadena = PostFija(valorIngresado)
-    root = ArbolExpre(cadena)
-    return root
-'''
-
-@app.route('/usuario', methods=['POST'])
-def usuario():
-    nombreUser = request.form['nombreUser']
-    return "<h1>Bienvenido " + nombreUser + "</h1>"
 
 if __name__=='__main__':
     app.run(debug=True, port=5000)
-    expr = input("Inserte la Expresion: ")
-    cadena = PostFija(expr)
-    root = ArbolExpre(cadena)
-    print("El resultado es: " + str(EvalArbolExpre(root)))
+
