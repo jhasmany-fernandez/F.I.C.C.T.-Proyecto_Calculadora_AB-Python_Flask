@@ -1,52 +1,38 @@
-"""
-MODULO CON SOLO METODOS.
-POSTFIJA() ES EL METODO USADO PARA TRANSFORMAR UNA NOTACION INFIJA A POSTFIJA
-SIENDO LOS DEMAS METODOS UTILZIADOS POR ESTE.
-"""
+# MODULO CON SOLO METODOS.
+# POSTFIJA() ES EL METODO USADO PARA TRANSFORMAR UNA NOTACION INFIJA A POSTFIJA
+# SIENDO LOS DEMAS METODOS UTILZIADOS POR ESTE.
 
 import sys
 from CPila import Pila
 p = Pila()
 
-def EsNum(dato):  
-    """
-    Devuelve True si en caracter es un numero.
-    """       
+'''Devuelve True si en caracter es un numero.'''
+def EsNum(dato):
     num = ["0","1","2","3","4","5","6","7","8","9","."]    
     for n in dato:
         if n  not in num:
             return False                     
     return True  
 
-def EsPareIzq(dato): 
-    """
-    Devuelve True si el caracter es un parentesis
-    de apertura.
-    """  
+'''Devuelve True si el caracter es un parentesis
+    de apertura.'''
+def EsPareIzq(dato):
     b = True if dato == "(" else False
     return b
 
+'''Devuelve True si el caracter es un parentesis 
+    de cierre.'''
 def EsPareDere(dato):
-    """
-    Devuelve True si el caracter es un parentesis 
-    de cierre.
-    """
     b = True if dato == ")" else False
     return b
 
+'''Devuelve True si el caracter es un operador.'''
 def EsOperador(dato):
-    """
-    Devuelve True si el caracter es un operador.
-    """        
     b = True if dato in "+-*/" else False
     return b  
     
-
+'''Devuelve el nivel de precedencia del operador'''
 def Precedencia(dato):
-    """
-    Devuelve el nivel de precedencia del operador
-    """    
-    
     if dato in "+-":
         return 1
     elif dato in "*/":
@@ -58,11 +44,8 @@ def EsPunto(dato):
     b = True if dato == "." else False
     return b
 
-
+'''Introduce la expresion en una lista.'''
 def ListaE(expre):
-    """
-    Introduce la expresion en una lista.
-    """
     num = ""
     lista = []
     for char in expre:
@@ -84,10 +67,8 @@ def ListaE(expre):
         lista.append(num)        
     return lista
 
+'''Analiza una expresion, para determinar si existe un error de sintaxis "ES"'''
 def Analizar(lista):
-    """
-    Analiza una expresion, para determinar si existe un error de sintaxis "ES"
-    """
     c = 0
     op = "/*-+"    
     if len(lista) > 2:
@@ -131,12 +112,9 @@ def Analizar(lista):
             return "ES" 
         return "ND"           
 
-
+'''Convierte una expresion a notacion postfija y
+    devuelve una lista'''
 def PostFija(cadena):
-    """
-    Convierte una expresion a notacion postfija y
-    devuelve una lista
-    """
     expre = ListaE(cadena)  
     if expre == "ES":
         return "ES"   

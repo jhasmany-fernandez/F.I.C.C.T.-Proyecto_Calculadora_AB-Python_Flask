@@ -1,51 +1,34 @@
-"""
-CLASE ARBOL
-"""
+# CLASE ARBOL
 from CNodo import Nodo
 
 class Arbol:     
     def __init__(self):
         self.__root = None
         
-
+    '''Getter del atributo root.'''
     @property
     def root(self):
-        """
-        Getter del atributo root.
-        """
         return self.__root
 
+    '''Setter del atributo root.'''
     @root.setter 
     def root(self, nodo):
-        """
-        Setter del atributo root.
-        """
         self.__root = nodo         
 
-
+    '''Comprueba si la raiz esta vacia.'''
     def Vacio(self):
-        """
-        Comprueba si la raiz esta vacia.
-        """
         return  self.__root is None   
     
-    
+    '''Inserta un dato al arbol.'''
     def Insertar(self, dat):
-        """
-        Inserta un dato al arbol.
-        """
-        
         if self.Vacio() :
-            self.root = Nodo(dat)
+            self.root = Nodo(dat) # crea un nodo y lo inserta en la raiz
         else:            
-            self.__Insert(dat, self.root)
+            self.__Insert(dat, self.root) # llama a esta funcion auxiliar y le pasa la raiz
             
-
+    '''Metodo llamado por Insetar(), que recorre recursivamente 
+        el arbol hasta insertar el nuevo dato.'''
     def __Insert(self, dat , nodo):
-        """
-        Metodo llamado por Insetar(), que recorre recursivamente 
-        el arbol hasta insertar el nuevo dato.
-        """
         if nodo is None:
             nodo = Nodo(dat)
         else:
@@ -60,38 +43,26 @@ class Arbol:
                 else:
                     self.__Insert(dat, nodo.der)   
                  
-
-
-
+    '''Recorrido InOrden.'''
     def InOrden(self, raiz):
-        """
-        Recorrido InOrden.
-        """
         if raiz is not None :
             self.InOrden(raiz.izq)
             print(raiz.dato, end=" ")
             self.InOrden(raiz.der)
 
+    '''Recorrido PreOrden.'''
     def PreOrden(self, raiz):
-        """
-        Recorrido PreOrden.
-        """
         if raiz is not None:
             print(raiz.dato, end=" ") 
             self.PreOrden(raiz.izq)
             self.PreOrden(raiz.der) 
 
+    '''Recorrido PostOrden'''
     def PostOrden(self, raiz):
-        """
-        Recorrido PostOrden.
-        """
         if raiz is not None:
             self.PostOrden(raiz.izq)
             self.PostOrden(raiz.der)
             print(raiz.dato)
-
-             
-
 
 if __name__ == "__main__":
 
@@ -103,10 +74,7 @@ if __name__ == "__main__":
     Raiz.Insertar(18)
     Raiz.Insertar(25)
     Raiz.Insertar(40)
-   
-    
 
-    
     Raiz.InOrden(Raiz.root)
 
 

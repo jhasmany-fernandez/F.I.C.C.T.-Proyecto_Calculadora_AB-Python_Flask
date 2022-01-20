@@ -1,41 +1,31 @@
-"""
-CLASE PILA
-"""
+# CLASE PILA
+
 from CNodo import Nodo
 
 class Pila:
     def __init__(self):
         self.__tope = None
 
-
+    '''Comprueba si la pila esta vacia.'''
     def vacia(self):
-        """
-        Comprueba si la pila esta vacia.
-        """
         return self.__tope is None
 
+    '''Devuelve el elemento de la cima de la pila.'''
     def cima(self):
-        """
-        Devuelve el elemento de la cima de la pila.
-        """
         if (not self.vacia()) :
             return self.__tope.dato
         else:
             return None
 
+    '''Mete un nuevo elemento a la pila'''
     def meter(self , val):
-        """
-        Mete u nuevo elemento a la pila.
-        """
         aux = Nodo()
         aux.dato = val
         aux.der = self.__tope
         self.__tope = aux
 
-    def sacar(self): 
-        """
-        Extrae el elemento de la cima de la pila.
-        """ 
+    '''Extrae el elemento de la cima de la pila.'''
+    def sacar(self):
         e = None       
         if (not self.vacia()):
             aux = Nodo()
@@ -44,11 +34,8 @@ class Pila:
             self.__tope = self.__tope.der
             del aux
         return e 
-
+    '''Imprime los elementos contenidos en la pila.'''
     def imprimir(self):
-        """
-        Imprime los elementos contenidos en la pila.
-        """
         aux = Pila() 
         e = None
         while not self.vacia():
@@ -64,7 +51,6 @@ if __name__ == "__main__":
     pila.meter(1)
     pila.meter(2)
     pila.meter(3)
-    
 
     pila.imprimir()
    

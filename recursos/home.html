@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<script>
+        function disabletext(e){
+        return false
+        }
+        function reEnable(){
+        return true
+        }
+        document.onselectstart=new Function ("return false")
+        if (window.sidebar){
+        document.onmousedown=disabletext
+        document.onclick=reEnable
+        }
+      </script>
+
+      <script language="JavaScript">
+        function deshabilitar(){
+        alert ("Seguridad: Calculadora AB")
+        return false
+        }
+        document.oncontextmenu=deshabilitar
+    </script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Calculadora AB | Flask</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <!-- Bootstrapp 5.1-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css')}}">
+</head>
+<body>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-3">
+
+        <span class="text-muted"><h4>UNIVERSIDAD: {{universidad}} | FACULTAD: {{facultad}} | MATERIA: {{materia}} | NOMBRE: {{ nombre }} | REGISTRO: {{registro}}</h4></span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark navbar-light">
+        <h1 class="container-fluid"></h1>
+        <h1 class="centrado">&nbsp;</h1><h1 class="centrado">&nbsp;PROYECTO: CALCULADORA &nbsp;AB</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container" >
+        <div class="calculator card">
+            <form action="/" method="post">
+                <input type="text" name="datos" class="calculator-screen z-depth-1"  value="{{resultado}}" readonly="readonly"/>
+            </form>
+            <div class="calculator-keys">
+
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="+">{{ suma }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="-">{{ resta }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="*">{{ multiplicacion }}</button>
+                <button type="button" id="button" class="operator btn btn-info" onclick="enviarTexto" value="/">{{ division }}</button>
+
+                <button type="button" id="button" onclick="enviarTexto" value="7" class="btn btn-light waves-effect">{{siete}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="8" class="btn btn-light waves-effect">{{ocho}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="9" class="btn btn-light waves-effect">{{nueve}}</button>
+
+
+                <button type="button" id="button" onclick="enviarTexto" value="4" class="btn btn-light waves-effect">{{cuatro}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="5" class="btn btn-light waves-effect">{{cinco}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="6" class="btn btn-light waves-effect">{{seis}}</button>
+
+
+                <button type="button" id="button" onclick="enviarTexto" value="1" class="btn btn-light waves-effect">{{uno}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="2" class="btn btn-light waves-effect">{{dos}}</button>
+                <button type="button" id="button" onclick="enviarTexto" value="3" class="btn btn-light waves-effect">{{tres}}</button>
+
+
+                <button type="button" id="button" onclick="enviarTexto" value="0" class="btn btn-light waves-effect">{{cero}}</button>
+                <button type="button" id="button" class="decimal function btn btn-secondary" onclick="enviarTexto" value=".">{{ punto }}</button>
+                <button type="button" id="button" class="all-clear function btn btn-danger btn-sm" onclick="enviarTexto" value="all-clear">{{ limpiar }}</button>
+
+                <button type="button" id="button" class="equal-sign operator btn btn-default" onclick="enviarTexto" value="=">{{ igual }}</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your custom scripts -->
+    <script>
+      const calculator = {
+      displayValue: '0',
+      firstOperand: null,
+      waitingForSecondOperand: false,
+      operator: null,
+    };
+
+    // Imprimir los Digitos en el input.
+    function inputDigit(digit) {
+      const { displayValue, waitingForSecondOperand } = calculator;
+
+      if (waitingForSecondOperand === true) {
+        calculator.displayValue = digit;
+        calculator.waitingForSecondOperand = false;
+      } else {
+        calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+      }
+    }
+    // habilitar la impresion del punto decimal.
+    function inputDecimal(dot) {
+      // Si el `displayValue` no contiene un punto decimal
+      if (!calculator.displayValue.includes(dot)) {
+        // Agregar el punto decimal
+        calculator.displayValue += dot;
+      }
+    }
+
+    // El boton AC
+    function resetCalculator() {
+      calculator.displayValue = '0';
+      calculator.firstOperand = null;
+      calculator.waitingForSecondOperand = false;
+      calculator.operator = null;
+    }
+
+    //Constructor ejecuta en segundo plano.
+    function updateDisplay() {
+      const display = document.querySelector('.calculator-screen');
+      display.value = calculator.displayValue;
+    }
+
+    updateDisplay();
+
+    const keys = document.querySelector('.calculator-keys');
+    keys.addEventListener('click', (event) => {
+      const { target } = event;
+      if (!target.matches('button')) {
+        return;
+      }
+
+      if (target.classList.contains('operator')) {
+        handleOperator(target.value);
+            updateDisplay();
+        return;
+      }
+
+      if (target.classList.contains('decimal')) {
+        inputDecimal(target.value);
+            updateDisplay();
+        return;
+      }
+
+      if (target.classList.contains('all-clear')) {
+        resetCalculator();
+            updateDisplay();
+        return;
+      }
+
+      inputDigit(target.value);
+      updateDisplay();
+    });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

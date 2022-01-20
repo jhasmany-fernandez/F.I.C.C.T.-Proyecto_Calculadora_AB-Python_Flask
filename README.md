@@ -32,6 +32,8 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 ## PROYECTO: CALCULADORA AB FLASK:
 > LINK PROYECTO:
 >> + Link -> [Web Calculadora AB](https://calculadora-ab-flask.herokuapp.com/)
+![Calculadora AB](https://user-images.githubusercontent.com/36086876/150285892-39cbd026-02ff-4bb7-96ac-d81ed28c1bb6.gif)
+
 
 ## COMANDOS: PYTHON - PIP 
 > Version pip
@@ -71,6 +73,13 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 ## LINK TUTORIALES:
 > [Tu Primer Página Web con Python3](https://www.youtube.com/watch?v=fxavwHPJ36o) <br>
 > [Python con Flask Envio de datos desde formularios HTML](https://www.youtube.com/watch?v=dlhg8HMZTOk) <br>
+
+## BIBLIOGRAFIA DE INVESTIGACION:
+> [Notaciones Prefija, Infija y Postfija (Con ejemplos de conversiones)](https://www.youtube.com/watch?v=PgZfeEZZnxg&list=LL) <br>
+> [Traducción de una expresión en un arbol binario](https://www.infor.uva.es/~cvaca/asigs/AlgInfPost.htm) <br>
+> [Evaluación del árbol de expresión](https://www.geeksforgeeks.org/evaluation-of-expression-tree/) <br>
+> [Árbol de expresiones binarias](https://en.wikipedia.org/wiki/Binary_expression_tree) <br>
+> [Arboles](http://aniei.org.mx/paginas/uam/CursoPoo/curso_poo_12.html) <br>
 
 ## REPOSITORIO. 
 ![github ficct](https://user-images.githubusercontent.com/36086876/119494544-69bc6900-bd2f-11eb-8c42-810b19ede512.png) 

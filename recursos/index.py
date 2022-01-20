@@ -69,7 +69,9 @@ def index():
 
         igual = igual, # '''Complementos'''
         punto = punto,
-        limpiar = limpiar
+        limpiar = limpiar,
+
+        resultado = resultado
 
     )
 

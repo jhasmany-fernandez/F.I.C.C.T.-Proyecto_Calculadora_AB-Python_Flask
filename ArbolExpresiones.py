@@ -4,12 +4,9 @@ from CNodo import Nodo
 from CPila import Pila
 from NotacionPost import PostFija
  
-
-def ArbolExpre(cadena):  
-  """
-     Metodo que crea un arbol de expresiones y 
-     devuelve la raiz de dicho arbol.     
-  """        
+'''Metodo que crea un arbol de expresiones y 
+     devuelve la raiz de dicho arbol. '''
+def ArbolExpre(cadena):
   operador = "+-*/"
   pila = Pila()
   for char in cadena:
@@ -28,21 +25,15 @@ def EsDecimal(val):
      return False
    return True  
 
-
+'''Metodo que evalua un arbol de expresiones y 
+     devuelve el resultado de dicha evaluacion.'''
 def EvalArbolExpre(root):
-  """
-     Metodo que evalua un arbol de expresiones y 
-     devuelve el resultado de dicha evaluacion.
-  """   
   if root is not None:
     if (root.izq == None and root.der == None):
       d = float(root.dato) if EsDecimal(root.dato) else int(root.dato)
       return d
     a = EvalArbolExpre(root.izq)
     b = EvalArbolExpre(root.der)
-
-    
-
     if (root.dato == '+'):
       return a+b 
     elif(root.dato == '-'):
@@ -58,7 +49,6 @@ def EvalArbolExpre(root):
         return sys.exit() #Termina el programa
         """
         return "DC"
-
 
 if __name__ == "__main__" :  
   expr = input("Inserte la Expresion: ")
