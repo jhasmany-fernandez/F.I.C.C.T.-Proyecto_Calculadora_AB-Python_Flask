@@ -22,9 +22,9 @@ class Arbol:
     '''Inserta un dato al arbol.'''
     def Insertar(self, dat):
         if self.Vacio() :
-            self.root = Nodo(dat) # crea un nodo y lo inserta en la raiz
+            self.root = Nodo(dat)
         else:            
-            self.__Insert(dat, self.root) # llama a esta funcion auxiliar y le pasa la raiz
+            self.__Insert(dat, self.root)
             
     '''Metodo llamado por Insetar(), que recorre recursivamente 
         el arbol hasta insertar el nuevo dato.'''

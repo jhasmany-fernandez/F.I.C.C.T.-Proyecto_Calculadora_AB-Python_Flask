@@ -71,7 +71,7 @@ def index():
         punto = punto,
         limpiar = limpiar,
 
-        resultado = resultado
+        resultado = resultado # '''Metodo POST '''
 
     )
 

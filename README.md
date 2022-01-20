@@ -22,7 +22,11 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 ## HEROKU.
 ![heroku-github](https://user-images.githubusercontent.com/36086876/147297006-544bafce-225a-4513-83be-b5f510a17aec.png)
 
-> INSTALADORES.
+## DEVELPERS.
+> + FERNANDEZ ORTEGA JHASMANY (FRONETEND) <br>
+> + SOTO SOLAR JAIME (BACKEND) <br>
+
+## INSTALADORES.
 * [Para descargar Python:](https://www.python.org/) <br>
 * [Para descargar PyCharm:](https://www.jetbrains.com/es-es/pycharm/) <br>
 * [Para descargar Anaconda](https://www.anaconda.com/products/individual) <br>
@@ -32,8 +36,8 @@ F.I.C.C.T. | Materia: Estructura Datos II | Docente: Juan Carlos Peinado Pereira
 ## PROYECTO: CALCULADORA AB FLASK:
 > LINK PROYECTO:
 >> + Link -> [Web Calculadora AB](https://calculadora-ab-flask.herokuapp.com/)
+>> + Link -> [Explicacion sobre el proyecto](https://youtu.be/aw0cLvNJRQU) <br>
 ![Calculadora AB](https://user-images.githubusercontent.com/36086876/150285892-39cbd026-02ff-4bb7-96ac-d81ed28c1bb6.gif)
-
 
 ## COMANDOS: PYTHON - PIP 
 > Version pip
